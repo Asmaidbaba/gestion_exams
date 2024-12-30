@@ -1,0 +1,60 @@
+/* ======= Configuration de base ======= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Police définie */
+}
+
+/* ======= Style pour le Body ======= */
+body {
+    background-color: #f4f4f4; /* Couleur de fond neutre */
+    color: #333; /* Couleur principale du texte */
+    display: flex; /* Permet un alignement flexible */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Hauteur de la fenêtre */
+    overflow: hidden; /* Évite les barres de défilement inutiles */
+}
+
+/* ======= Exemple de conteneur central ======= */
+.container {
+    background: #fff; /* Fond blanc */
+    width: 90%; /* Largeur par défaut */
+    max-width: 400px; /* Limite la largeur maximale */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrer le contenu */
+}
+
+/* ======= Exemple de texte ======= */
+h1 {
+    font-size: 1.8rem; /* Taille du titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #007bff; /* Couleur bleue pour le titre */
+}
+
+p {
+    font-size: 1rem; /* Taille standard pour les paragraphes */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin-bottom: 15px; /* Espacement sous les paragraphes */
+    color: #555; /* Texte légèrement gris */
+}
+
+/* ======= Bouton d'exemple ======= */
+button {
+    background-color: #007bff; /* Couleur bleue */
+    color: #fff; /* Texte blanc */
+    padding: 10px 15px; /* Espacement interne */
+    font-size: 1rem; /* Taille du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur clic */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
