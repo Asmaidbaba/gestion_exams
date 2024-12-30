@@ -10,7 +10,7 @@ class Login extends Controller
     public function index()
     {
 
-        return view('auth/login');
+        return view('login/login');
     }
 
     public function auth()
