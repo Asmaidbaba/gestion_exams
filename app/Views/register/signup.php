@@ -5,204 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href ="https://codepen.io/finnhvman/pen/bmNdNr.css">
-<style>    /* Material Customization */
-:root {
-    --pure-material-primary-rgb: 255, 191, 0;
-    --pure-material-onsurface-rgb: 0, 0, 0;
-}
+    <style>
+        :root {
+            --primary-color: #ffbf00;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --border-radius: 8px;
+            --transition-duration: 0.3s;
+        }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: url("https://res.cloudinary.com/finnhvman/image/upload/v1541930411/pattern.png");
-}
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background: linear-gradient(135deg, #ffbf00 30%, #ff9b00);
+            color: var(--text-color);
+        }
 
-.registration {
-    position: relative;
-    border-radius: 8px;
-    padding: 16px 48px;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    background-color: white;
-}
+        .registration {
+            background-color: #fff;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
 
-h1 {
-    margin: 32px 0;
-    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-    font-weight: normal;
-    text-align: center;
-}
+        .registration h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
 
-.registration > label {
-    display: block;
-    margin: 24px 0;
-    width: 320px;
-}
+        .registration label {
+            display: block;
+            text-align: left;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
 
-a {
-    color: rgb(var(--pure-material-primary-rgb));
-    text-decoration: none;
-}
+        .registration input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            outline: none;
+            margin-bottom: 20px;
+            transition: border-color var(--transition-duration);
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        .registration input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(255, 191, 0, 0.5);
+        }
 
-button {
-    display: block !important;
-    margin: 32px auto;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    border: none;
-    border-radius: 4px;
-    padding: 0 16px;
-    min-width: 64px;
-    height: 36px;
-    vertical-align: middle;
-    text-align: center;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
-    background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 36px;
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-}
+        .registration button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color var(--transition-duration);
+        }
 
-.done,
-.progress {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    visibility: hidden;
-}
+        .registration button:hover {
+            background-color: #e0a800;
+        }
 
-.done {
-    transition: visibility 0s 1s;
-}
+        .alert {
+            text-align: left;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
 
-.signed > .done {
-    visibility: visible;
-}
+        .registration .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            border-radius: var(--border-radius);
+        }
 
-.done > a {
-    display: inline-block;
-    text-decoration: none;
-}
+        .registration .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            border-radius: var(--border-radius);
+        }
 
-.progress {
-    opacity: 0;
-}
+        @media (max-width: 576px) {
+            .registration {
+                padding: 30px 20px;
+            }
 
-.signed > .progress {
-    animation: loading 4s;
-}
-
-@keyframes loading {
-    0% {
-        visibility: visible;
-    }
-    12.5% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    87.5% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.left-footer,
-.right-footer {
-    position: fixed;
-    padding: 14px;
-    bottom: 14px;
-    color: #555;
-    background-color: #eee;
-    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-    font-size: 14px;
-    line-height: 1.5;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.left-footer {
-    left: 0;
-    border-radius: 0 4px 4px 0;
-    text-align: left;
-}
-
-.right-footer {
-    right: 0;
-    border-radius: 4px 0 0 4px;
-    text-align: right;
-}
-
-.left-footer > a,
-.right-footer > a {
-    color: black;
-}
-
-.left-footer > a:hover,
-.right-footer > a:hover {
-    text-decoration: underline;
-}
-</style>
-
+            .registration h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<form class="registration" action="<?= base_url('auth') ?>" method="POST">
-<?= csrf_field() ?>
+    <form class="registration" action="<?= base_url('register') ?>" method="POST">
+        <?= csrf_field() ?>
 
-  <h1>👋 Inscription!</h1>
+        <h1>👋 Inscription</h1>
 
-  <label class="pure-material-textfield-outlined">
-  <span>Adresse Email</span>
-     <input type="email" name="email" required value="<?= old('email') ?>">
-      
-  </label>
-  <label class="pure-material-textfield-outlined">
-  <span>Mot de passe </span>
-    <input type="password" id="password" name="password" required>
-    
-  </label>
-       
+        <!-- Affichage des messages d'erreur ou de succès -->
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+        <?php endif; ?>
 
-  <button class="pure-material-button-contained" type="submit">Inscription</button>
+        <label for="email">Adresse Email</label>
+        <!-- Affichage de l'erreur près de l'input si elle existe -->
+        <?php if (isset($validation) && $validation->getError('email')): ?>
+            <div class="alert alert-danger"><?= $validation->getError('email') ?></div>
+        <?php endif; ?>
+        <input type="email" id="email" name="email" required value="<?= old('email') ?>">
 
-  <div class="done">
-    <h1>👌 You're all set!</h1>
-    <a class="pure-material-button-text" href="javascript:window.location.reload(true)">Again</a>
-  </div>
-  <div class="progress">
-    <progress class="pure-material-progress-circular" />
-  </div>
-</form>
+        <label for="password">Mot de passe</label>
+        <!-- Affichage de l'erreur près de l'input si elle existe -->
+        <?php if (isset($validation) && $validation->getError('password')): ?>
+            <div class="alert alert-danger"><?= $validation->getError('password') ?></div>
+        <?php endif; ?>
+        <input type="password" id="password" name="password" required>
 
-
-           
-
-       
-   
+        <button type="submit">Inscription</button>
+    </form>
 </body>
 </html>
