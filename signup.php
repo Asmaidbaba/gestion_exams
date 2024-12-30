@@ -143,9 +143,6 @@
 
         
         <button type="submit">Inscription</button>
-        <div class="login-link">
-            <p>Vous avez déjà un compte ? <a href="<?= base_url('login') ?>">Connectez-vous ici</a></p>
-        </div>
     </form>
 </body>
 </html>
