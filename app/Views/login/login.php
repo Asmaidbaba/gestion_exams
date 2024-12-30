@@ -61,7 +61,7 @@
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
         <p class="mt-3">
-            Vous n'avez pas déjà un compte ? <a href="<?= base_url('auth/store') ?>">inscrit-vous</a>
+            Vous n'avez pas déjà un compte ? <a href="<?= base_url('register') ?>">inscrit-vous</a>
         </p>
     </div>
 </body>
