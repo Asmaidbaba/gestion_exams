@@ -141,6 +141,7 @@
         <?php endif; ?>
         <input type="password" id="password" name="password" required>
 
+        
         <button type="submit">Inscription</button>
     </form>
 </body>
